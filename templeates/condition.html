@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{color:green}
+        h1{color:blue}
+        h3{color:red;
+            font-size: 50px;}
+    </style>
+</head>
+<body>
+    <center>
+    <h2>...if...</h2><!--i am going to if condition using jinja tags-->
+    {% if a > 15 %}
+    <h1>inside if Block</h1>
+    <h1>a value is {{a}}</h1>
+     {% endif %}
+    <h2>...if elif...</h2><!--i am going to if elif condition using jinja tags-->
+        {% if a > b and a > c %}
+        <h1>Inside if </h1>
+        <h1>a is maximum</h1>
+    {% elif b > c %}
+        <h1>Inside elif </h1>
+        <h1>b is maximum</h1>
+    {% else %}
+        <h1>Inside else </h1>
+        <h1>c is maximum</h1>
+    {% endif %}
+   <h2>...nested if...</h2> <!--i am going to nested if condition using jinja tags-->
+    {% if a > b %}
+    {% if a > c %}
+        <h1> a is max</h1>
+    {% else %}
+        <h1>c is Max</h1>
+    {% endif %}
+{% else %}
+    {% if b > c %}
+        <h1>B is max</h1>
+    {% else %}
+        <h1>C is max</h1>
+
+    {% endif %}
+{% endif %}
+
+  <h2>...for loop...</h2><!--i am going to for loop using jinja tags-->
+    {% for i in name %}
+    <h3>{{i}}</h3> 
+    {% endfor %}
+    </center>
+</body>
+</html>
